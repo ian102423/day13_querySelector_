@@ -29,7 +29,7 @@ var formData = [
   },
   {
     type: "select",
-    label: "Select Language",
+    label: "Select language...",
     id: "user-language",
     icon: "",
     options: [
@@ -83,7 +83,7 @@ var formData = [
 var mainBody = document.querySelector("#mainBody");
 
 function createTitle(text) {
-  var appTitle = document.createElement("h1");
+  var appTitle = document.createElement("h2");
   appTitle.textContent = text;
   mainBody.appendChild(appTitle);
 }
@@ -138,15 +138,18 @@ function createSelect(config, parent) {
 }
 
 function submitButton(text) {
+  var createDiv = document.createElement("div");
+  createDiv.setAttribute("id", "button");
+  mainBody.appendChild(createDiv);
   var submitButton = document.createElement("button");
   submitButton.textContent = text;
-  mainBody.appendChild(submitButton);
+  createDiv.appendChild(submitButton);
 }
 
-function(){
-  
+function putFa() {
+  formInput.appendChild("i");
 }
 
 buildForm(formData);
-submitButton("Submit Button");
-
+submitButton("Submit Form");
+putFa();
